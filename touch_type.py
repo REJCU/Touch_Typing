@@ -125,20 +125,22 @@ chosen_sentence = int(
 )
 
 
+
 while scores <= target:
     if chosen_sentence == 1:
-        z = random.choice(HIGH_FREQUENCY)
+        sentence = random.choice(HIGH_FREQUENCY)
     elif chosen_sentence == 2:
-        z = random.choice(HOME_ROW_BASIC_FINGER_MOVEMENT)
+        sentence = random.choice(HOME_ROW_BASIC_FINGER_MOVEMENT)
     elif chosen_sentence == 3:
-        z = random.choice(RHYTHMIC_SENTENCES)
+        sentence = random.choice(RHYTHMIC_SENTENCES)
     else:
-        z = "Invalid choice!"
+        sentence = "Invalid choice!"
     # z = random.choice(z)
-    print(z)
-    y = input("Touch Type: ")
+    print(sentence)
+    answer = input("Touch Type: ")
 
-    if y in z:
+# TODO - Treats everything as correct. Just checks if word is in x
+    if answer in sentence:
         print("correct")
         scores += 1
     else:
