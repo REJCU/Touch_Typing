@@ -1,0 +1,6 @@
+Chosen Sentence: 1 --- Repittion:2 --- Time: 0.89
+Chosen Sentence: 3 --- Repittion:1 --- Time: 0.56
+Chosen Sentence: 1 --- Repition:1 --- Time: 0.46
+Chosen Sentence: 1 --- Repition:1 --- Time: 0.49
+Chosen Sentence: 3 --- Repition:1 --- Time: 23.665844202041626
+Chosen Sentence: 3 --- Repition:1 --- Time: 29

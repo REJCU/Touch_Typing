@@ -1,5 +1,6 @@
 import random
 import time
+from decimal import Rounded
 from tokenize import NEWLINE
 
 WORDS = [
@@ -149,9 +150,18 @@ while scores < target:
         print("incorrect")
 
 end_time = time.time()
-length = end_time - start_time
-print(f"Time: {int(length)} Seconds")
+total_seconds = end_time - start_time
+minutes = int(total_seconds // 60)
+seconds = int(total_seconds % 60)
+print(f"Time: {minutes} Minutes and {seconds} Seconds")
+
+with open("typing_scores.txt", "a") as f:
+    f.write(
+        f"Chosen Sentence: {chosen_sentence} --- Repition:{scores} --- Time: {int(total_seconds)} Seconds\n"
+    )
+
 
 """
-Could add an output file to record past attempts
+Could add an output file to record past attempts.
+Distunguihes between what chosen sentence.
 """
