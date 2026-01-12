@@ -1,4 +1,5 @@
-import random, time
+import random
+import time
 from tokenize import NEWLINE
 
 WORDS = [
@@ -121,13 +122,14 @@ scores = 0
 target = int(input("Repetition: "))
 
 chosen_sentence = int(
-    input("1.HIGH_FREQUENCY\n2.HOME_ROW_BASIC_FINGER_MOVEMENT\n3.RHYTHMIC_SENTENCES:   ")
+    input(
+        "1.HIGH_FREQUENCY\n2.HOME_ROW_BASIC_FINGER_MOVEMENT\n3.RHYTHMIC_SENTENCES:   "
+    )
 )
 
 
-
+start_time = time.time()
 while scores < target:
-    start_time = time.time()
     if chosen_sentence == 1:
         sentence = random.choice(HIGH_FREQUENCY)
     elif chosen_sentence == 2:
@@ -150,6 +152,6 @@ end_time = time.time()
 length = end_time - start_time
 print(f"Time: {int(length)} Seconds")
 
-""" 
+"""
 Could add an output file to record past attempts
 """
