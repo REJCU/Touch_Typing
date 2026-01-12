@@ -1,4 +1,4 @@
-import random
+import random, time
 from tokenize import NEWLINE
 
 WORDS = [
@@ -121,12 +121,13 @@ scores = 0
 target = int(input("Repetition: "))
 
 chosen_sentence = int(
-    input("1.HIGH_FREQUENCY 2.HOME_ROW_BASIC_FINGER_MOVEMENT 3.RHYTHMIC_SENTENCES:   ")
+    input("1.HIGH_FREQUENCY\n2.HOME_ROW_BASIC_FINGER_MOVEMENT\n3.RHYTHMIC_SENTENCES:   ")
 )
 
 
 
-while scores <= target:
+while scores < target:
+    start_time = time.time()
     if chosen_sentence == 1:
         sentence = random.choice(HIGH_FREQUENCY)
     elif chosen_sentence == 2:
@@ -139,9 +140,16 @@ while scores <= target:
     print(sentence)
     answer = input("Touch Type: ")
 
-# TODO - Treats everything as correct. Just checks if word is in x
-    if answer in sentence:
+    if answer == sentence:
         print("correct")
         scores += 1
     else:
         print("incorrect")
+
+end_time = time.time()
+length = end_time - start_time
+print(f"Time: {int(length)} Seconds")
+
+""" 
+Could add an output file to record past attempts
+"""
