@@ -1,3 +1,4 @@
+import datetime
 import random
 import time
 from decimal import Rounded
@@ -121,6 +122,7 @@ RHYTHMIC_SENTENCES = [
 
 scores = 0
 target = int(input("Repetition: "))
+attempt_date = datetime.datetime.now()
 
 chosen_sentence = int(
     input(
@@ -157,11 +159,14 @@ print(f"Time: {minutes} Minutes and {seconds} Seconds")
 
 with open("typing_scores.txt", "a") as f:
     f.write(
-        f"Chosen Sentence: {chosen_sentence} --- Repition:{scores} --- Time: {int(total_seconds)} Seconds\n"
+        f"Chosen Sentence: {chosen_sentence} --- Repetition:{scores} --- Time: {int(total_seconds)} --- Date: {attempt_date.day}-{attempt_date.month}-{attempt_date.year}  \n"
     )
 
 
 """
+Add a time and date to record progress and eventually plot it out.
+
+
 Could add an output file to record past attempts.
 Distunguihes between what chosen sentence.
 """
