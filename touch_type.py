@@ -73,7 +73,9 @@ with open("typing_scores.txt", "a") as f:
 """
 Add a time and date to record progress and eventually plot it out.
 
-
 Could add an output file to record past attempts.
 Distunguihes between what chosen sentence.
+
+Make into Classes and eventually a GUI
+
 """
